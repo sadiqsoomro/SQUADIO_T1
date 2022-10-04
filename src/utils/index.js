@@ -6,5 +6,5 @@ const responseHandler = require('./response');
 
 module.exports = {
   CustomError,
-  responseHandler
+  ...responseHandler
 };
