@@ -25,5 +25,3 @@ app.use((err, req, res, next) => globalErrorHandler(err, req, res, next));
 app.server.listen(config.nodeServicePort, () => {
     console.info(`Started server on => http://localhost:${app.server.address().port}`);
 });
-
-module.exports = app;
