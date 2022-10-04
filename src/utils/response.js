@@ -14,6 +14,7 @@ const responseHandler = (data) => {
 };
 
 const globalErrorHandler = (err, request, response, next) => {
+    const originalError = err;
     if (!(err instanceof CustomError)) {
         if (err instanceof Error) {
             err = new CustomError({
