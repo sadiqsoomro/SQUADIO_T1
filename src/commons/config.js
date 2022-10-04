@@ -1,4 +1,5 @@
 require('dotenv').config();
 module.exports = config = {
-    nodeServicePort : process.env.NODE_SERVICE_PORT || 4000
+    nodeServicePort : process.env.NODE_SERVICE_PORT || 4000,
+    authToken : process.env.AUTH_TOKEN || null
 }
