@@ -5,6 +5,7 @@ const cors = require('cors');
 const config = require('./commons/config');
 const { setRouter } = require('./routes/api');
 const { globalErrorHandler } = require('./utils/response');
+const { MongoDB } = require('./utils');
 
 process.on('unhandledRejection', (err) => {
     console.error(`Unhandled Rejection Details::${err}`)
@@ -22,6 +23,13 @@ setRouter(app);
 // Added Global Error handler as middleware
 app.use((err, req, res, next) => globalErrorHandler(err, req, res, next));
 
-app.server.listen(config.nodeServicePort, () => {
+app.server.listen(config.nodeServicePort, async () => {
     console.info(`Started server on => http://localhost:${app.server.address().port}`);
+    const connectDatabase = await MongoDB.connectMongoDB();
+    if(!connectDatabase){
+        console.error("Something went wrong while connecting to database.")
+        app.server.close();
+        return;
+    } 
+    console.log("Database connected successfully")
 });
