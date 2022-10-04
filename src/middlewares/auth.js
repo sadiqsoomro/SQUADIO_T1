@@ -1,7 +1,7 @@
 const { CustomError } = require('../utils');
 const { ERROR_CODES } = require('../constants');
 const { authToken } = require('../commons/config')
-const adminAuthMiddleware = async (req, res, next) => {
+module.exports = authMiddleware = async (req, res, next) => {
     try {
         if (!req.headers.authorization) throw new CustomError(ERROR_CODES.AUTH_TOKEN_NOT_FOUND);
         const tokens = req.headers.authorization.replace(/^\s+|\s+$/g, "").split(' ');
@@ -13,3 +13,4 @@ const adminAuthMiddleware = async (req, res, next) => {
         next(error);
     }
 };
+
