@@ -1,4 +1,3 @@
-const express = require('express');
 const cacheRouter = require('./cache');
 
 const setRouter = (app) => {
