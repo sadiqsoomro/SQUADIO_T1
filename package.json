@@ -1,0 +1,26 @@
+{
+  "name": "squadio_t1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadiqsoomro/SQUADIO_T1.git"
+  },
+  "keywords": [
+    "squadio",
+    "test"
+  ],
+  "author": "Sadiq Soomro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sadiqsoomro/SQUADIO_T1/issues"
+  },
+  "homepage": "https://github.com/sadiqsoomro/SQUADIO_T1#readme",
+  "dependencies": {
+    "mongoose": "^6.6.4"
+  }
+}
