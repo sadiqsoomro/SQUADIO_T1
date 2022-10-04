@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const config = require('./commons/config');
-const { setRouter } = require('./route/api');
+const { setRouter } = require('./routes/api');
 const { globalErrorHandler } = require('./utils/response');
 
 process.on('unhandledRejection', (err) => {
