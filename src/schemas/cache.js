@@ -1,13 +1,18 @@
-const {Schema,model} = require("mongoose");
-
+const { Schema, model } = require("mongoose");
+const { Utils } = require("../utils")
 const CacheSchema = new Schema({
   key: String,
-  value: String,
-  isExpired : { type: Boolean, default: false}
+  value: {
+    type: String,
+    default: generateRandom = () => {
+      return Utils.GenerateRandomString();
+    }
+  },
+  isExpired: { type: Boolean, default: false }
 },
-{
-  timestamps: true
-});
+  {
+    timestamps: true
+  });
 
 const Cache = model("Cache", CacheSchema);
 module.exports = Cache
