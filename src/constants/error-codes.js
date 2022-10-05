@@ -11,4 +11,8 @@ module.exports = {
         code: 400,
         message: 'CACHE TTL is invalid positive number.',
     },
+    INVALID_COLLECTION_LIMIT: {
+        code: 400,
+        message: 'Collection limit is invalid positive number.',
+    },
 };
