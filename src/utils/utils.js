@@ -1,4 +1,5 @@
 const uuid = require("uuid");
+const moment = require("moment");
 const { cacheTTL } = require("../commons/config")
 
 const GenerateRandomString = () => {
@@ -16,8 +17,7 @@ const GenerateTTL = () => {
 }
 
 const IsCacheValid = (itemTTL) => {
-    if(itemTTL > Date.now()) false;
-    else true;
+    return moment(itemTTL).isAfter(Date.now());
 }
 
 module.exports = {
