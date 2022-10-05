@@ -21,3 +21,18 @@ MongoDB is hosted free of cost on Atlas, you can have a view if you have compass
 You can either use same credentials for testing (test data already cleared) or connect it with local database.
 
 Use command "npm start" to start the server.
+
+# SAMPLE CURL REQUEST
+
+curl --location --request GET 'http://localhost:4000/v1/cache/testKey' \
+--header 'Authorization: Bearer JUMP-AUTH-TOKEN'
+
+# SAMPLE RESPONSE
+
+{
+    "code": 200,
+    "errors": null,
+    "message": "Request successful",
+    "result": "C6C27A17AA034A029DBFC4DBE0477206",
+    "isSuccess": true
+}
