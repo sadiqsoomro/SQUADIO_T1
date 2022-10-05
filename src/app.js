@@ -23,7 +23,7 @@ setRouter(app);
 // Added Global Error handler as middleware
 app.use((err, req, res, next) => globalErrorHandler(err, req, res, next));
 
-app.server.listen(config.nodeServicePort, async () => {
+app.server.listen(process.env.PORT || 4000, async () => {
     console.info(`Started server on => http://localhost:${app.server.address().port}`);
     const connectDatabase = await MongoDB.connectMongoDB();
     if(!connectDatabase){
