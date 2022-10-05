@@ -7,4 +7,8 @@ module.exports = {
         code: 401,
         message: 'Authorization token not found.',
     },
+    INVALID_TTL: {
+        code: 400,
+        message: 'CACHE TTL is invalid positive number.',
+    },
 };
