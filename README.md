@@ -1,27 +1,27 @@
 # SQUADIO_T1
 
-Clone/download repo from URL: https://github.com/sadiqsoomro/SQUADIO_T1
-Go to package root directory
-Run command: "npm install"
-Create .env file in root directory and paste the following config
+Clone/download repo from URL: https://github.com/sadiqsoomro/SQUADIO_T1 <br />
+Go to package root directory <br />
+Run command: "npm install" <br />
+Create .env file in root directory and paste the following config <br />
+<br />
+/////////////////////////////// <br />
+NODE_SERVICE_PORT = 4000 <br />
+AUTH_TOKEN = JUMP-AUTH-TOKEN <br />
+API_VERSION = v1 <br />
+MONGO_DB_USER = squadio <br />
+MONGO_DB_PASS = ZbshyhzvTsNluWSl <br />
+MONGO_DB_DATABASE = SquadioDatabase <br />
+MONGO_DB_CLUSTER = squadiocluster.qg8vmal.mongodb.net <br />
+MONGO_CACHE_TTL = 5 <br />
+MONGO_COLLECTION_LIMIT = 15 <br />
+////////////////////////////// <br />
 
-///////////////////////////////
-NODE_SERVICE_PORT = 4000
-AUTH_TOKEN = JUMP-AUTH-TOKEN
-API_VERSION = v1
-MONGO_DB_USER = squadio
-MONGO_DB_PASS = ZbshyhzvTsNluWSl
-MONGO_DB_DATABASE = SquadioDatabase
-MONGO_DB_CLUSTER = squadiocluster.qg8vmal.mongodb.net
-MONGO_CACHE_TTL = 5
-MONGO_COLLECTION_LIMIT = 15
-//////////////////////////////
-
-MongoDB is hosted free of cost on Atlas, you can have a view if you have compass.
-You can either use same credentials for testing (test data already cleared) or connect it with local database.
-
-Use command "npm start" to start the server.
-
+MongoDB is hosted free of cost on Atlas, you can have a view if you have compass. <br />
+You can either use same credentials for testing (test data already cleared) or connect it with local database. <br />
+<br /> 
+Use command "npm start" to start the server. <br />
+<br />
 # SAMPLE CURL REQUEST
 
 curl --location --request GET 'http://localhost:4000/v1/cache/testKey' \
