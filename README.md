@@ -5,6 +5,12 @@ Go to package root directory <br />
 Run command: "npm install" <br />
 Create .env file in root directory and paste the following config <br />
 <br />
+
+# Heroku 
+The service is deployed on Heroku.<br />
+Use following base URL to access : https://squadi-t1.herokuapp.com/<br />
+Use following URL for cache API: https://squadi-t1.herokuapp.com/v1/cache/:cacheKey<br />
+<br />
 /////////////////////////////// <br />
 NODE_SERVICE_PORT = 4000 <br />
 AUTH_TOKEN = JUMP-AUTH-TOKEN <br />
