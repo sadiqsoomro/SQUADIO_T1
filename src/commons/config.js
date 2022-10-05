@@ -7,5 +7,6 @@ module.exports = config = {
     dbPassword : process.env.MONGO_DB_PASS,
     dbName : process.env.MONGO_DB_DATABASE,
     dbCluster : process.env.MONGO_DB_CLUSTER,
-    cacheTTL : process.env.MONGO_CACHE_TTL || 20
+    cacheTTL : process.env.MONGO_CACHE_TTL || 20,
+    collectionLimit : process.env.MONGO_COLLECTION_LIMIT || 10
 }
