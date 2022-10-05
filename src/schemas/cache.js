@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-const { Utils } = require("../utils")
+const  Utils  = require("../utils/utils")
 const CacheSchema = new Schema({
   key: String,
   value: {
