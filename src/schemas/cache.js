@@ -8,7 +8,12 @@ const CacheSchema = new Schema({
       return Utils.GenerateRandomString();
     }
   },
-  isExpired: { type: Boolean, default: false }
+  ttl: { 
+    type: Date, 
+    default: ttl_timer = () => {
+      return Utils.GenerateTTL();
+    } 
+  }
 },
   {
     timestamps: true
